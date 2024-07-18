@@ -1,0 +1,11 @@
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "main": "todo.js",
+  "scripts": {
+    "start": "node todo.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"  
+  }
+}
