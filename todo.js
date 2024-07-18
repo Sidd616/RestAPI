@@ -4,12 +4,14 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Use body-parser middleware to parse JSON bodies
 app.use(bodyParser.json());
 
 let todos = [];
 let nextId = 1;
 
-const DATA_FILE = 'todos.json';
+// Set the path for the data file
+const DATA_FILE = 'D:\\home\\site\\wwwroot\\todos.json';
 
 // Load todos from file
 const loadTodos = () => {
@@ -90,6 +92,7 @@ app.use((req, res) => {
     res.status(404).send('Route not found');
 });
 
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
